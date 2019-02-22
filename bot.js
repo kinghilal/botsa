@@ -2127,32 +2127,5 @@ async def on_message(message):
     }
 });
 
-client.on('message', message => {
-     if (message.content === "السلام " + "عليكم") {
-message.channel.sendMessage("" + "وعليكم السلام");
-    }
-});
-
-client.on("guildMemberAdd", m => { 
-let room = m.guild.channels.find(a => a.name === '❄-fake'); 
-if (datediff(parseDate(moment(m.user.createdTimestamp).format('l')), parseDate(moment().format('l'))) < 30) {
-    m.ban() .then(( 
-        room.send(`**:no_entry: | ${m} Has been banned for: \`fake\`**`)
-    ));
-}; 
-function parseDate(str) {
-    var mdy = str.split('/'); 
-    return new Date(mdy[2], mdy[0]-1, mdy[1]); 
-};
-
-function datediff(first, second) {
-    return Math.round((second-first)/(1000*60*60*24));
-};
-});
-
-client.on("guildCreate", guild => {
-  console.log(` Join Bot Of Server ${guild.name} Owner Of Server ${guild.owner.user.username}!`)
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
