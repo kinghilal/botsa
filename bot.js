@@ -2111,21 +2111,5 @@ client.on("message", message => {
     }
 });
 
-async def on_message(message):
- await client.send_message(message.channel, "<@%s> Pong" % (userID))
-    if message.content.upper().startswith('-SAY'):
-        args = message.content.split(" ")
-        #args[0] = !SAY
-        #args[1] = SA
-        #args[2] = Code
-        #args[3] = Good
-        #args[4] = Server
-        #args[1:] = SA Code Good Server
-        await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
-      });
-     });
-    }
-});
-
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
