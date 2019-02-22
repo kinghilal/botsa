@@ -1920,7 +1920,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/oauth2/authorize?client_id=548422740101824512&permissions=2146958847&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -2108,6 +2108,28 @@ client.on("message", message => {
     
       });
      });
+    }
+});
+
+async def on_message(message):
+ await client.send_message(message.channel, "<@%s> Pong" % (userID))
+    if message.content.upper().startswith('-SAY'):
+        args = message.content.split(" ")
+        #args[0] = !SAY
+        #args[1] = SA
+        #args[2] = Code
+        #args[3] = Good
+        #args[4] = Server
+        #args[1:] = SA Code Good Server
+        await client.send_message(message.channel, "%s" % (" ".join(args[1:])))
+      });
+     });
+    }
+});
+
+client.on('message', message => {
+     if (message.content === "السلام " + "عليكم") {
+message.channel.sendMessage("" + "وعليكم السلام");
     }
 });
 
